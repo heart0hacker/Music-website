@@ -366,6 +366,10 @@ async function main() {
 
     //add an event listener to search:
     let textInput = document.querySelector(".search input")
+    textInput.addEventListener("input", (event)=>{
+        searchtext = event.target.value
+        console.log(searchtext)
+    })
     textInput.addEventListener("click", e => {
         e.target.classList.add("text");
     })
@@ -436,7 +440,7 @@ async function main() {
                 break;
 
             default:
-                console.log(`Key Pressed: ${event.key}`);
+                // console.log(`Key Pressed`);
                 break;
         }
 

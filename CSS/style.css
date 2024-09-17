@@ -514,17 +514,8 @@ main {
     display: none;
 }
 
-.search :nth-child(2), .search :nth-child(3){
+.search :nth-child(1), .search :nth-child(2), .search :nth-child(3){
     display: none;
-}
-
-.search :nth-child(1){
-    position: absolute;
-    left: 0;
-    top: -10px;
-}
-.search.active .search :nth-child(2), .search :nth-child(3){
-    display: flex;
 }
 
 .container2{
