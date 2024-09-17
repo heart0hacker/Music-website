@@ -1,0 +1,565 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--colorbck);
+    color: var(--colortext);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.hamburger {
+    display: none;
+    position: relative;
+    top: 4px;
+    left: 8px;
+    cursor: pointer;
+}
+
+.close {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    right: 5px;
+    top: -39px;
+    z-index: 11;
+}
+
+.close img{
+    width: 50px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 38px;
+}
+
+.logo img {
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    padding-left: 160px;
+}
+
+.home {
+    background-color: var(--coloraround);
+    margin: 10px;
+    padding: 11px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.home img {
+    width: 24px;
+}
+
+.search {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+
+.search :nth-child(1) {
+    width: 24px;
+    position: absolute;
+    left: 8px;
+    top: 13px;
+    z-index: 1;
+}
+
+.search :nth-child(2) {
+    cursor: pointer;
+    width: 37vw;
+    height: 50px;
+    background-color: var(--coloraround);
+    color: var(--colortext);
+    position: relative;
+    padding: 10px 37px;
+    border: none;
+    border-radius: 90px;
+}
+
+.search :nth-child(3) {
+    width: 24px;
+    position: absolute;
+    right: 20px;
+    top: 13px;
+    z-index: 1;
+    border-left: 1px solid var(--colorA);
+    padding-left: 20px;
+}
+
+.search :nth-child(3) :hover {
+    transform: translate(1.1);
+}
+
+.search input::placeholder {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.search input:hover.text {
+    cursor: text;
+}
+
+.signupbtn {
+    width: 120px;
+    background-color: var(--colorbck);
+    border: none;
+    border-radius: 90px;
+    padding: 17px 27px;
+    color: var(--colorA);
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.signupbtn:hover {
+    transform: translate(1.1);
+    color: white;
+    font-size: 17px;
+}
+
+.loginbtn {
+    width: 120px;
+    background-color: white;
+    color: var(--colorbck);
+    border: none;
+    border-radius: 90px;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 17px 27px;
+    cursor: pointer;
+}
+
+.loginbtn:hover {
+    background-color: rgb(223, 220, 220);
+    font-size: 17px;
+}
+
+main {
+    display: flex;
+    padding: 0 4px;
+    box-sizing: border-box;
+}
+
+.left {
+    width: 23vw;
+    height: 80vh;
+    margin: 5px;
+    border-radius: 8px;
+    background-color: var(--colormain);
+    position: relative;
+}
+
+.right {
+    width: 77vw;
+    height: 80vh;
+    margin: 5px;
+    border-radius: 8px;
+    background-color: var(--colormain);
+    position: relative;
+}
+
+.library {
+    min-height: 60vh;
+}
+
+.library-heading {
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.library-heading :nth-child(1) {
+    width: 24px;
+}
+
+.library-heading :nth-child(2) {
+    color: var(--colorA);
+    font-size: 16px;
+    font-weight: 700;
+    width: 100px;
+}
+
+.library-heading :nth-child(3) {
+    width: 16px;
+    position: absolute;
+    right: 10px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 45px 0 28px;
+    gap: 10px;
+}
+
+.footer ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.footer ul li {
+    list-style: none;
+}
+
+.footer a {
+    text-decoration: none;
+    color: var(--colorA);
+    font-size: 11px;
+    font-weight: 400;
+}
+
+.englishbtn {
+    background-color: rgb(11, 11, 11);
+    color: var(--colortext);
+    width: 100px;
+    border: 1px solid white;
+    border-radius: 90px;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    position: absolute;
+    bottom: -60px;
+}
+
+.englishbtn img {
+    width: 24px;
+}
+
+.englishbtn:hover {
+    transform: scale(1.09);
+}
+
+.right h1 {
+    padding: 20px;
+    display: inline-flex;
+    cursor: pointer;
+}
+
+.right h1:hover{
+    text-decoration: underline;
+}
+
+.cont-container {
+    height: 60vh;
+    overflow: auto;
+}
+
+.container,
+.container2 {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+    height: 230px;
+    padding: 5px;
+}
+
+.card,
+.card2 {
+    width: 150px;
+    min-height: 200px;
+    cursor: pointer;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.card img{
+    width: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+}
+.card2 img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.songlist {
+    padding: 2px 12px;
+    overflow: auto;
+    height: 150px;
+}
+
+.songlist h3 {
+    font-size: 15px;
+}
+
+/* .songlist .info h3 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    transition: transform 0.5s ease-in-out;
+} */
+
+
+.songlist ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 14px;
+    margin: 5px;
+    border: 1px solid var(--colorA);
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+}
+
+.songlist ul li:hover, .songlist ul li:active{
+    padding: 11px 16px;
+    background-color: var(--colorbck);
+}
+
+.songlist ul li.playing{
+    margin: 0;
+    padding: 11px 16px;
+    background-color: var(--colorbck);
+}
+
+.beforeplay {
+    display: flex;
+    gap: 13px;
+}
+
+.card>svg,
+.card2>svg {
+    position: absolute;
+    bottom: 30px;
+    right: 10px;
+    z-index: 11;
+    background-color: rgb(23, 164, 23);
+    padding: 10px;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+}
+
+.card:hover,
+.card2:hover {
+    background-color: var(--coloraround);
+}
+
+.card:hover>svg,
+.card2:hover>svg {
+    bottom: 70px;
+    opacity: 1;
+}
+
+.playbar {
+    width: 73.5vw;
+    min-height: 50px;
+    padding: 10px;
+    background-color: var(--colorC);
+    position: fixed;
+    bottom: 10px;
+    z-index: 1000;
+}
+
+.buttoncontainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buttoncontainer img {
+    cursor: pointer;
+}
+
+.songbuttons>img {
+    padding: 2px 10px;
+    width: 35px;
+}
+
+.songinfo {
+    width: 220px;
+}
+
+.timevol {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.volume {
+    display: flex;
+    align-items: center;
+}
+
+.volume input {
+    cursor: pointer;
+}
+
+.seekbar {
+    height: 4px;
+    width: 95%;
+    background-color: grey;
+    position: absolute;
+    bottom: 0px;
+    cursor: pointer;
+}
+
+.circle {
+    width: 15px;
+    height: 15px;
+    background-color: var(--colorE);
+    border-radius: 50%;
+    position: relative;
+    bottom: 5px;
+    left: 0;
+    z-index: 11;
+}
+
+.progress {
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background-color: var(--colorF);
+    border-radius: 5px;
+}
+
+
+@media (max-width: 1200px) {
+    .left {
+        position: absolute;
+        width: 50vw;
+        z-index: 1100;
+        left: -130%;
+        bottom: 0;
+        height: 85vh;
+        transition: all 0.4s;
+    }
+    
+    nav{
+        padding-left: 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .close {
+        display: block;
+        z-index: 11;
+    }
+
+    .right {
+        width: 100vw;
+    }
+
+    .playbar {
+        width: calc(100% - 30px);
+    }
+
+    .right h1 {
+        padding: 5px 15px;
+    }
+}
+
+@media (max-width: 800px) {
+    header{
+    padding: 5px 38px;
+    }
+    
+.signupbtn {
+    width: 80px;
+    border-radius: 10px;
+    padding: 1px 4px;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.signupbtn:hover {
+    font-size: 14px;
+}
+
+.loginbtn {
+    width: 80px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 13px;
+    padding: 1px 4px;
+}
+
+.loginbtn:hover {
+    font-size: 14px;
+}
+
+.buttoncontainer{
+    flex-direction: column;
+    text-align: center;
+}
+
+.timevol{
+    flex-direction: column;
+}
+
+.home{
+    display: none;
+}
+
+.search :nth-child(2), .search :nth-child(3){
+    display: none;
+}
+
+.search :nth-child(1){
+    position: absolute;
+    left: 0;
+    top: -10px;
+}
+.search.active .search :nth-child(2), .search :nth-child(3){
+    display: flex;
+}
+
+.container2{
+    padding-bottom: 30px;
+}
+
+.right h1 {
+    padding: 5px 15px;
+}
+}
+
+@media (max-width: 580px) {
+    .container,.container2{
+        max-height: unset;
+        overflow-y: unset;
+    }
+    .card,
+.card2 {
+    width: 90vw;
+}
+
+.left{
+    width: calc(100vw - 10px);
+}
+
+.songlist{
+    height: 50vh;
+}
+
+.songlist h3{
+    font-size: 10px;
+}
+
+.songlist p{
+    font-size: 8px;
+}
+
+}

@@ -1,0 +1,36 @@
+ /* for common things*/
+
+ :root {
+     --colorbck: rgb(0, 0, 0);
+     --colorBorder: rgba(79, 73, 73, 0.792);
+     --colortext: rgb(255, 255, 255);
+     --colormain: #151515;
+     --colorsvg: #b3b3b3;
+     --coloraround:#1f1f1f;
+     --colorA:rgb(179, 179, 179);
+     --colorB: rgb(95, 96, 37);
+     --colorC: rgb(25, 76, 65);
+     --colorD: rgb(20, 63, 25);
+     --colorE: rgb(144, 28, 105);
+     --colorF: rgb(41, 23, 134);
+     --colorG: rgb(134, 23, 78);
+     --colorH: rgba(137, 34, 57, 0.605);
+}
+
+.invert{
+    filter: invert(1);
+ }
+
+ ::-webkit-scrollbar {
+    width: 10px;
+    background-color: #000;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #333;
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #000;
+  }
